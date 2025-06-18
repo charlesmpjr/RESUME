@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 40px;
+}
+
+.language-skill {
+    display: flex; /* Para alinhar o nome da língua e a barra na mesma linha */
+    align-items: center; /* Centralizar verticalmente */
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 600px; /* Limita a largura do contêiner da skill */
+    margin-left: auto; /* Centraliza o contêiner */
+    margin-right: auto; /* Centraliza o contêiner */
+}
+
+.language-name {
+    flex: 1; /* Ocupa o espaço necessário */
+    font-weight: bold;
+    margin-right: 20px;
+    min-width: 150px; /* Garante que o nome tenha espaço suficiente */
+}
+
+.skill-bar-container {
+    flex: 2; /* A barra ocupa mais espaço que o nome */
+    width: 100%; /* Ocupa toda a largura disponível no seu flex item */
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 20px; /* Altura da barra */
+    overflow: hidden; /* Garante que o preenchimento não saia do container */
+}
+
+.skill-bar {
+    height: 100%;
+    background-color: #4CAF50; /* Cor de preenchimento da barra */
+    border-radius: 5px;
+    text-align: right;
+    color: white;
+    line-height: 20px; /* Alinha o texto verticalmente, se houver */
+    transition: width 0.8s ease-in-out; /* Transição suave para a largura */
+}
+
+/* Classes para os diferentes níveis de preenchimento */
+.fill-100 { width: 100%; background-color: #007bff; } /* Ex: Azul para Nativo */
+.fill-90 { width: 90%; background-color: #28a745; }  /* Ex: Verde para Fluente */
+.fill-70 { width: 70%; background-color: #ffc107; }  /* Ex: Amarelo para Profissional */
+.fill-40 { width: 40%; background-color: #dc3545; }  /* Ex: Vermelho para Básico */
+
+/* Se você quiser mostrar o percentual dentro da barra (opcional, requer JS para ser dinâmico) */
+/* .skill-bar::after {
+    content: attr(data-level) '%';
+    padding-right: 5px;
+    font-size: 0.8em;
+} */
